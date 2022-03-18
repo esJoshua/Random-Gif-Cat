@@ -62,11 +62,7 @@
       </div>
       <div id="divCat" class="col-12 p-4">
         <div class="centerFlex flex-column">
-          <button
-            type="button"
-            class="btn btn-secondary mb-4"
-            @click="gatosImg"
-          >
+          <button type="button" class="btn btn-secondary mb-4" @click="getData">
             Obtener mi gatito
           </button>
           <img :src="catImg" alt="" />
@@ -106,7 +102,7 @@ export default {
         console.error(error);
       }
     }, */
-    gatosImg() {
+    getData() {
       this.catImg = `https://cataas.com/cat/gif/says/${this.vTitle}?filter=${this.vFilter}&color=${this.vColor}&size=${this.vSize}&type=or`;
       console.log(this.catImg);
     },
